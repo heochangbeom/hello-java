@@ -33,6 +33,34 @@ public class main {
 					        );
 				}; //for end
 				break;
+			case 2: //도서등록.
+				System.err.println("도서번호>>");
+				int bno = scn.nextInt();scn.nextLine(); // 1003 엔터를 치면 사용자가 입력한 숫자 1003만 할당을 하고 엔터를 친 거를 다음 nextLine 도서제목으로 감 반환값 int
+				System.out.println("도서제목>>");
+				String title = scn.nextLine(); //반환값 String
+				System.out.println("도서저자>>");
+				String author = scn.nextLine(); //반환값 String
+				System.out.println("도서가격>>");
+				int price = scn.nextInt();scn.nextLine(); //반환값 int
+				
+				Book book = new Book(bno, title, author, price);
+				if (dao.insert(book)) {
+					System.out.println("정상 등록.");
+				} else {
+					System.out.println("등록 중 오류.");
+				}
+				break;
+				
+			case 3: //수정
+			System.out.println("도서번호>> ");
+			bno = scn.nextInt();scn.nextLine();
+			System.out.println("도서가격>> ");
+			price = scn.nextInt(); scn.nextLine();
+			
+			if (dao.update(bno, price))
+				System.out.println("정상 ");
+			break;
+				
 			case 9: // 종료
 				run = false;
 			}// end of switch.
