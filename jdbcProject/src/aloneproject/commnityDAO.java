@@ -1,4 +1,4 @@
-package com.yedam.app;
+package aloneproject;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,11 +8,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 // 조회, 등록, 수정, 삭제
-public class BookDAO {
+public class commnityDAO {
 	//숙제: 삭제(delete), 단건조회(findId) 작성해보세요
 	// 수정. 매개값(int bno, int price), 반환값(boolean)
 	public boolean update(int bno, int price) {
-		Connection conn = DBUtil.getConnect();
+		Connection conn = communityDABUtil.getConnect();
 		String query = "update book "
 				+ "     set price = ? " 
 				+ "     where id = ?";
@@ -36,9 +36,6 @@ public class BookDAO {
 		
 	}// end fo update.
 	
-	
-	
-	
 	// 등록. 매개값(Book), 반환값(boolean)
 	public boolean insert(Book book) {
 		Connection conn = DBUtil.getConnect();
@@ -61,8 +58,6 @@ public class BookDAO {
 		}
 		return false;
 	}
-	
-	
 	
 	
 	// 목록조회(다건)
@@ -89,3 +84,4 @@ public class BookDAO {
 		return list;
 	}//end of findAll().
 }
+
