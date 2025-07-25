@@ -28,7 +28,7 @@ public class Main {
 		//인터페이스 - 구현클래스.
 		BookMapper mapper = sqlSession.getMapper(BookMapper.class);
 		Book book = mapper.selectBook(1001);
-		List<Book> list = mapper.selectList();
+		List<Book> list = mapper.selectList(1);
 
 		// 단건조회.
 		
