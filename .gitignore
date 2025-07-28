@@ -1,2 +1,12 @@
+<<<<<<< HEAD
 /build/
 /target/
+=======
+/bin/
+/target/
+/.settings/
+/.classpath
+/.project
+/mvnProject/.classpath
+/mvnProject/.project
+>>>>>>> branch 'master' of https://github.com/heochangbeom/hello-java.git
